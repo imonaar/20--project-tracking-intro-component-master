@@ -1,0 +1,161 @@
+.main{
+    inline-size: 100%;
+    padding-left: 32px;
+    display: grid;
+    gap: 1.6875rem;
+
+    @include tabplus{
+        max-width: 69.375rem;
+        block-size: calc(100vh - 162px);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding-left: 0;
+    }
+
+    &__image{
+        inline-size: 100%;
+        block-size: 22.6875rem;
+        display: flex;
+        align-items: center;  
+
+        @include tabplus{
+            block-size: 100%;
+            background-position: 10% 100px;
+            background: none;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            inline-size: 100%;
+            block-size: 100%;
+            background-image: url('../../images/illustration-devices.svg');
+            background-size: 135% 32%;
+            background-repeat: no-repeat;
+            background-position: 10px 123px;
+            pointer-events: none;
+
+           @include tabplus{
+               inline-size: 50%;
+               background-size: 136% 60%;
+               background-position: 24px 215px;
+           }
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            block-size: 425px;
+            inline-size: 50vw;
+            background-color: var(--Light-Grayish-Blue);
+            z-index: -1;
+            border-radius: 0 0 0 60px;
+
+            @include tabplus{
+                block-size: 50vh;
+            }
+        }
+    }
+
+    &__details{
+        padding-right: 32px;
+        display: grid;
+        gap: 1rem;
+
+        @include tabplus{
+           grid-row: 1;
+           place-content: center;
+           padding-right: 0px;
+           padding-top: 5.2rem;
+        }
+        
+        .spans{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+
+            span{
+                text-transform: uppercase;
+                font-size: 15px;
+                line-height: 18px;
+                letter-spacing: 5px;
+                font-weight: 400;
+                font-family: 'Barlow Condensed', sans-serif;
+                color: var(--Dark-Grayish-Blue);
+
+                &:first-child{
+                    padding: 3px 10px;
+                    border-radius: 20px;
+                    background-color: var(--Very-Dark-Blue);
+                    color: white;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        h1{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+            color: var(--Very-Dark-Blue);
+            text-transform: uppercase;
+            font-family: 'Barlow Condensed', sans-serif;
+
+            @include tabplus{
+                font-size: 4rem;
+                line-height: 64px;
+                margin-top: 4px;
+                margin-bottom: 1rem;
+            }
+        }
+
+        p{
+            font-size: 1rem;
+            line-height: 26px;
+            font-weight: 400;
+            color: var(--Dark-Grayish-Blue  );
+
+            @include tabplus{
+                inline-size: 28ch;
+            }
+        }
+
+        .buttons{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            button{
+                text-transform: uppercase;
+                border: none;
+                background: none;
+                font-size: 14px;
+                border-radius: 5px;
+                cursor: pointer;
+                padding-block: 12px;
+                font-family: 'Barlow Condensed', sans-serif;
+                
+
+                &:first-child{
+                    background-color: var(--Red);                  
+                    color: white;
+                    font-weight: 700;
+                    letter-spacing: 0.93px;
+                }
+
+                &:last-child{
+                    letter-spacing: 2.5px;
+                }
+            }
+
+            @include tabplus{
+                margin-top: 3rem;
+                inline-size: 23.75rem;
+            }
+        }
+    }
+}

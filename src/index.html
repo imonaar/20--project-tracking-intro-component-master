@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="#">
+                <img src="../images/logo.svg" alt="#">
+            </a>
+        </div>
+        <nav class="header__nav">
+            <button class="header__nav-btn js-menu-btn" aria-controls="menu">
+                <img class="open" src="../images/icon-hamburger.svg" alt="open">
+                <img class="close" src="../images/icon-close.svg" alt="close">
+            </button>
+            <div class="header__nav-links js-links">
+                <ul role="menu" id="menu">
+                    <li role="presentation">
+                        <a role="menuitem" href="#">Product</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" href="#">Features</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" href="#">Pricing</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" href="#">Log In </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="main__image"></div>
+        <div class="main__details">
+            <div class="spans">
+                <span>New</span>
+                <span>Monograph</span>
+                <span> dashboard</span>
+            </div>
+            <h1>Powerful insights into your team</h1>
+            <p>Project planning and time tracking for agile teams</p>
+            <div class="buttons">
+                <button>Schedule a demo</button>
+                <button>to see a preview</button>
+            </div>
+        </div>
+    </main>
+   
+    <script src="index.js"></script>
+</body>
+</html>
